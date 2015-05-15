@@ -46,3 +46,10 @@ CommandeFourn number(5) not NULL,
 Quantite number(3) not NULL,
 constraint LigneProduit_FK_Produit foreign key(Produit) references Produit,
 constraint LigneProduit_FK_CommandeFourn foreign key(CommandeFourn) references CommandeFourn);
+
+CREATE TABLE Evenement
+(Nom varchar2(50) not NULL constraint Evenement_Pk primary key,
+Lieu varchar2(50) not NULL,
+Date date not NULL,
+Thematique varchar2(50) not NULL,
+NbPersAttendues number(5));
