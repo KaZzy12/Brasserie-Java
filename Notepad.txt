@@ -1,0 +1,13 @@
+insertions commandes : creer la commande puis inserer les lignes une par une qui sont dans une arraylist
+on doit gérer la réception de marchandises + les vidanges ?
+
+updateEtat : je sais pas si je dois mettre un insert ou un update (-> update)
+
+manière gen : regarder aux requètes sql element.getX
+
+finir les appels pour le resultset
+
+faire les recherches 1-3
+par rappport a la 2 : 
+3 : juste retirer le nom fourniss
+1: retirer la date
