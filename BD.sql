@@ -25,7 +25,7 @@ QteStock numeric(5));
 CREATE TABLE CommandeFourn
 (Numéro numeric(5) not NULL constraint CommandeFourn_Pk primary key,
 DateCommande date not NULL,
-Utilisateur varchar(20) not NULL constraint Utilisateur_FK foreign key,
+Utilisateur varchar(20) not NULL,
 Fournisseur varchar(20) not NULL,
 ValidationManager varchar(12) not NULL,
 constraint CommandeFourn_FK_Utilisateur foreign key(Utilisateur) references Utilisateur,
