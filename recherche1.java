@@ -1,6 +1,6 @@
 //Recherche 1
 
-Resulset donnees = //cmd sql
+Resulset donnees = //resultat cmd sql
 
 Commande commande;
 int numero;
@@ -19,12 +19,10 @@ while (donnees.next()){
 		gc.setTime(dateEd);
 		commande.setDateCommande(gc);
 	}
-	
-	nomGestio = donnees.getString("Utilisateur");
-	commande.setNomGestio(nomGestio);
-	
-	nomFourniss = donnees.getString("Fournisseur");
-	commande.setNomFourniss(nomFourniss);
+
+	commande.setNomGestio(donnees.getString("Utilisateur"));
+
+	commande.setNomFourniss(donnees.getString("Fournisseur"));
 	
 	allCommandes.add(commande);
 }
