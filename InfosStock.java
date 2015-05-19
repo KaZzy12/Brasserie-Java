@@ -15,7 +15,7 @@ java.sql.Date dateEd;
 double pourcReduc;
 int qteStock;
 
-ArrayList<Produit> allProduit = new ArrayList<Produit>();
+ArrayList<Produit> allProduits = new ArrayList<Produit>();
 
 while (donnees.next()){
 	produit = new Produit (donnees.getInt("Reference"));
@@ -52,5 +52,5 @@ while (donnees.next()){
 	if (donnees.wasNull() == false){
 		produit.setQteStock(qteStock);
 	}
-	
+	allProduits.add(produit);
 }
