@@ -1,6 +1,6 @@
 // Renvoi commande
 	//infos cmd
-Resulset donnees = //cmd sql
+Resulset donnees = //resultat cmd sql
 
 Commande commande;
 int numero;
@@ -21,19 +21,16 @@ while (donnees.next()){
 		commande.setDateCommande(gc);
 	}
 	
-	nomGestio = donnees.getString("Utilisateur");
-	commande.setNomGestio(nomGestio);
-	
-	nomFourniss = donnees.getString("Fournisseur");
-	commande.setNomFourniss(nomFourniss);
-	
-	etat = donnees.getString("Etat");
-	commande.setEtat(etat);
+	commande.setNomGestio(donnees.getString("Utilisateur"));
+
+	commande.setNomFourniss(donnees.getString("Fournisseur"));
+
+	commande.setEtat(donnees.getString("Etat"));
 	
 	allCommandes.add(commande);
 }
 	//ligne prod
-Resulset donnees = //cmd sql
+Resulset donnees = //resultat cmd sql
 
 LigneProduit ligneProduit;
 int reference;
@@ -46,14 +43,11 @@ ArrayList<LigneProduit> allLignesProduits = new ArrayList<LigneProduit>();
 while (donnees.next()){
 	ligneProduit = new LigneProduit (donnees.getInt("Produit");
 	
-	libelle = donnees.getString("Libelle");
-	ligneProduit.setLibellle(libelle);
+	ligneProduit.setLibellle(donnees.getString("Libelle"));
 	
-	quantite = donnees.getInt("Quantite");
-	ligneProduit.setQuantite(quantite);
-	
-	prixBase = donnees.getDouble("PrixBase");
-	ligneProduit.setPrixBase(prixBase);
+	ligneProduit.setQuantite(donnees.getInt("Quantite"));
+
+	ligneProduit.setPrixBase(donnees.getDouble("PrixBase"));
 	
 	allLignesProduits.add(ligneProduit);
 }
