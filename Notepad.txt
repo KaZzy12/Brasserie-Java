@@ -1,5 +1,6 @@
 insertions commandes : creer la commande puis inserer les lignes une par une qui sont dans une arraylist
 on doit gérer la réception de marchandises + les vidanges ?
+si réception : ligneProduit -> produit : add qte stock.
 
 updateEtat : je sais pas si je dois mettre un insert ou un update (-> update)
 
