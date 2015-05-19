@@ -7,12 +7,12 @@ int nbIns = prepStat.executeUpdate( );
 
 //Modif produit
 
-String instructionSQL = "UPDATE Produit SET colonne = valeur where Reference = "+getReference+"')"; 
+String instructionSQL = "UPDATE Produit SET colonne = valeur where Reference = '"+getReference+"')"; 
 PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
 int nbIns = prepStat.executeUpdate( );
 
 //Supr Produit
 
-String instructionSQL = "DELETE FROM Produit where Reference = "+getReference+"')"; 
+String instructionSQL = "DELETE FROM Produit where Reference = '"+getReference+"')"; 
 PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
 int nbIns = prepStat.executeUpdate( );
