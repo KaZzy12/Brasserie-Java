@@ -10,3 +10,9 @@ ResultSet donnees = prepStat.executeQuery();  //comment lancer l'exeption a part
 	prepStat.setString(1,getLogin());
 	prepStat.setString(2,getPassword());
 */
+
+//renvoi ligne cmd
+
+String instructionSQL = "select * from LigneProduit where CommandeFourn = "+getCommandeFourn()+" and Produit = "+getProduit()+";";
+preparedStatement prepStat = connexion.preparedStatement(instructionSQL);
+ResultSetdonnees=prepStat.executeQuery();
