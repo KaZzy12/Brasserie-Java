@@ -27,7 +27,7 @@ CREATE TABLE CommandeFourn
 DateCommande date not NULL,
 Utilisateur varchar(20) not NULL,
 Fournisseur varchar(20) not NULL,
-ValidationManager varchar(12) not NULL,
+Etat varchar(12) not NULL,
 constraint CommandeFourn_FK_Utilisateur foreign key(Utilisateur) references Utilisateur,
 constraint CommandeFourn_FK_Fournisseur foreign key(Fournisseur) references Fournisseur);
  
