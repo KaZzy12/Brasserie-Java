@@ -37,6 +37,7 @@ Produit numeric(4) not NULL,
 Utilisateur varchar(20) not NULL,
 DateRetour date not NULL,
 Quantite numeric(4) not NULL,
+constraint RetourVidange_Pk primary key (Fournisseur, Produit, Utilisateur),
 constraint RetourVidange_FK_Utilisateur foreign key(Utilisateur) references Utilisateur,
 constraint RetourVidange_FK_Produit foreign key(Produit) references Produit,
 constraint RetourVidange_FK_Fournisseur foreign key(Fournisseur) references Fournisseur);
@@ -45,6 +46,7 @@ CREATE TABLE LigneProduit
 (Produit numeric(4) not NULL,
 CommandeFourn numeric(5) not NULL,
 Quantite numeric(3) not NULL,
+constraint LigneProduit_Pk primary key (CommandeFourn, Produit),
 constraint LigneProduit_FK_Produit foreign key(Produit) references Produit,
 constraint LigneProduit_FK_CommandeFourn foreign key(CommandeFourn) references CommandeFourn);
 
