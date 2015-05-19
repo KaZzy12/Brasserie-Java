@@ -1,18 +1,18 @@
 //Insert new produit
 Connection connexion = … ;
 
-String instructionSQL = "INSERT INTO Produit VALUES('"+getReference()+"', '"+getLibelle()+"', '"+getPrixBase()+"', '"+getPrixVidange()+"', '"+getTVA()+"', '"+getReduction()+"', '"+getDateFinReduc()+"', '"+getPourcReduc()+"', '"+getQteStock()+"')";
+String instructionSQL = "INSERT INTO Produit VALUES('"+produit.getReference()+"', '"+produit.getLibelle()+"', '"+produit.getPrixBase()+"', '"+produit.getPrixVidange()+"', '"+produit.getTVA()+"', '"+produit.getReduction()+"', '"+produit.getDateFinReduc()+"', '"+produit.getPourcReduc()+"', '"+produit.getQteStock()+"')";
 PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
 int nbIns = prepStat.executeUpdate( );
 
 //Modif produit
 
-String instructionSQL = "UPDATE Produit SET colonne = valeur where Reference = '"+getReference+"')"; 
+String instructionSQL = "UPDATE Produit SET colonne = valeur where Reference = '"+produit.getReference+"')"; 
 PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
 int nbIns = prepStat.executeUpdate( );
 
 //Supr Produit
 
-String instructionSQL = "DELETE FROM Produit where Reference = '"+getReference+"')"; 
+String instructionSQL = "DELETE FROM Produit where Reference = '"+produit.getReference+"')"; 
 PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
 int nbIns = prepStat.executeUpdate( );
