@@ -53,6 +53,6 @@ constraint LigneProduit_FK_CommandeFourn foreign key(CommandeFourn) references C
 CREATE TABLE Evenement
 (Nom varchar(50) not NULL constraint Evenement_Pk primary key,
 Lieu varchar(50) not NULL,
-Date date not NULL,
+DateEvenement date not NULL,
 Thematique varchar(50) not NULL,
 NbPersAttendues numeric(5));
