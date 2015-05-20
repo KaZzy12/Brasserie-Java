@@ -1,4 +1,4 @@
-String instructionSQL = "insert into CommandeFourn (Etat) values (?) (where Numero = (?))"; // where ?? chap 9 slide 20 ?? 
+String instructionSQL = "UPDATE CommandeFourn SET Etat = ? where Numero = '"+commande.getNumero; 
 PreparedStatementprepStat= connexion.prepareStatement(instructionSQL);
 prepStat.setString(1, commande.getEtat());
-prepStat.executeUpdate( );
+prepStat.executeUpdate();
