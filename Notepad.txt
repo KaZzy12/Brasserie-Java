@@ -1,6 +1,6 @@
 - insertions commandes : creer la commande puis inserer les lignes une par une qui sont dans une arraylist
-on doit gérer la réception de marchandises + les vidanges ?
-si réception : ligneProduit -> produit : add qte stock.
+on doit gérer les vidanges ?
+- réception : ligneProduit -> produit : add qte stock.
 
 updateEtat : je sais pas si je dois mettre un insert ou un update (-> update)
 
@@ -8,14 +8,16 @@ manière gen : regarder aux requètes sql element.getX
 
 finir les appels pour le resultset
 
-faire les recherches 1-3
+faire les recherches 1-3 DONE
 par rappport a la 2 : 
 3 : juste retirer le nom fourniss
 1: retirer la date
 
+completer les recherches (requetes SQL)
+
 Paas oublier les catchs bd
 
-revoir les prepareStatement ! OK MAGGLE
+-revoir les prepareStatement ! OK MAGGLE
   ok (en principe) : Insertion Cmd, dataAccess, modifFourniss, ModifsProduit
   now je viens de me rendre compte qu'il faut check les facultatif #Retard, si facultatif : insert -> update (chap 9 slide 21)
   
