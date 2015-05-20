@@ -15,7 +15,7 @@ par rappport a la 2 :
 
 Paas oublier les catchs bd
 
-revoir les prepareStatement ! 
+revoir les prepareStatement ! OK MAGGLE
   ok (en principe) : Insertion Cmd, dataAccess, modifFourniss, ModifsProduit
   now je viens de me rendre compte qu'il faut check les facultatif #Retard, si facultatif : insert -> update (chap 9 slide 21)
   
