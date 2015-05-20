@@ -15,7 +15,7 @@ par rappport a la 2 :
 
 completer les recherches (requetes SQL)
 
-Paas oublier les catchs bd
+Paas oublier les check bd
 
 -revoir les prepareStatement ! OK MAGGLE
   ok (en principe) : Insertion Cmd, dataAccess, modifFourniss, ModifsProduit
