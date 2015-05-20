@@ -13,9 +13,6 @@ par rappport a la 2 :
 3 : juste retirer le nom fourniss
 1: retirer la date
 
-dans n°cmd, je peux identity ? http://blog.developpez.com/sqlpro/p6135/ms-sql-server/auto_increment_identity_avec_sql_server
-
-
 Paas oublier les catchs bd
 
 revoir les prepareStatement ! 
