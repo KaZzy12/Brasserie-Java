@@ -20,7 +20,7 @@ if(produit.getPrixVidange() != NULL){
 if (produit.getReduction() != NULL){
 	instructionSQL = "UPDATE Produit set Reduction = ? where Reference = "+produit.getReference();
 	PreparedStatementprepStat = connexion.prepareStatement(instructionSQL);
-	prepStat.setDouble(6,produit.getReduction());
+	prepStat.setBoolean(6,produit.getReduction());
 	prepStat.executeUpdate();
 }
 
