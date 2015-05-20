@@ -1,4 +1,4 @@
-//Recherche 1
+//Recherche 2
 
 Resulset donnees = //resultat cmd sql
 
