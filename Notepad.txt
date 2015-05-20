@@ -23,4 +23,4 @@ Paas oublier les check bd
   
 revoir les update produit + fournisseur !
 
-
+renvoyer le produit lors de la création cmd (PrixBase TVA) from libelle or ref
