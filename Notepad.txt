@@ -17,3 +17,5 @@ dans n°cmd, je peux identity ? http://blog.developpez.com/sqlpro/p6135/ms-sql-s
 
 
 Paas oublier les catchs bd
+
+revoir les prepareStatement !
