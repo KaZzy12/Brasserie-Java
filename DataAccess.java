@@ -2,17 +2,16 @@
 
 Connection connexion = ?;
 
-String instructionSQL = "select * from Utilisateur where login = "utilisateur.getLogin()+"and password = "+utilisateur.getPassword();
+String instructionSQL = "select * from Utilisateur where login = ? and password = ?)";
 preparedStatement prepStat = connexion.preparedStatement(instructionSQL);
-ResultSet donnees = prepStat.executeQuery();  //comment lancer l'exeption a partir de la ? dans le cours y a une flèche sur donnees avec throws SQLExeption
-
-/* dans ma création de l'instruction ça devrait pas être comme ça ? :/ (j'ai du mal a capter xD)
-	prepStat.setString(1,getLogin());
-	prepStat.setString(2,getPassword());
-*/
+prepStat.setString(1,utilisateur.getLogin());
+prepStat.setString(2,utilisateur.getPassword());
+ResultSet donnees = prepStat.executeQuery();
 
 //renvoi ligne cmd
 
-String instructionSQL = "select * from LigneProduit where CommandeFourn = "+ligneProduit.getCommandeFourn()+" and Produit = "+ligneProduit.getProduit();
+String instructionSQL = "select * from LigneProduit where CommandeFourn = ? and Produit = ?)";
 preparedStatement prepStat = connexion.preparedStatement(instructionSQL);
+prepStat.setInt(1,ligneProduit.getCommandeFourn());
+prepStat.setInt(2,ligneProduit.getProduit());
 ResultSetdonnees=prepStat.executeQuery();
