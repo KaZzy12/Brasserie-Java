@@ -12,6 +12,8 @@
       Utilisateur user = new Utilisateur (donnees.getString("Login"), donnees.getString("Password"), donnees.getString("Nom"), donnees.getString("Prenom"), donnees.getString("Fonction"),
     }else
      exeption
+     
+ }
  
 
 
