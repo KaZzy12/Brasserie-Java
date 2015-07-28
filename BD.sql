@@ -12,7 +12,7 @@ CodePostal numeric(4) not NULL,
 Localite varchar(50) not NULL);
  
 CREATE TABLE Produit
-(Reference numeric(4) not NULL constraint Produit_Pk primary key,
+(Reference numeric(5) IDENTITY (120,1) constraint Produit_Pk primary key,
 Libelle varchar(30) not NULL,
 PrixBase numeric(3,2) not NULL,
 PrixVidange numeric(4,2),
