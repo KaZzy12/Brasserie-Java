@@ -20,8 +20,8 @@ TVA numeric(4) not NULL,
 Reduction BOOLEAN not NULL,
 DateFinReduc date,
 PourcReduc numeric(4,2),
-QteStock numeric(5)
-QteMinStock numeric(5));
+QteStock numeric(5) not NULL,
+QteMinStock numeric(5) not NULL);
  
 CREATE TABLE CommandeFourn
 (Numéro numeric(5) not NULL constraint CommandeFourn_Pk primary key,
