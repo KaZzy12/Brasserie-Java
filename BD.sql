@@ -17,7 +17,7 @@ Libelle varchar(30) not NULL,
 PrixBase numeric(3,2) not NULL,
 PrixVidange numeric(4,2),
 TVA numeric(4) not NULL,
-Reduction BOOLEAN,
+Reduction BOOLEAN not NULL,
 DateFinReduc date,
 PourcReduc numeric(4,2),
 QteStock numeric(5)
