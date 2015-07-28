@@ -56,4 +56,4 @@ CREATE TABLE Evenement
 Lieu varchar(50) not NULL,
 DateEvenement date not NULL,
 Thematique varchar(50) not NULL,
-NbPersAttendues numeric(5));
+NbPersAttendues numeric(8));
