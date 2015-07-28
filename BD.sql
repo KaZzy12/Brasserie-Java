@@ -20,7 +20,8 @@ TVA numeric(4) not NULL,
 Reduction BOOLEAN,
 DateFinReduc date,
 PourcReduc numeric(4,2),
-QteStock numeric(5));
+QteStock numeric(5)
+QteMinStock numeric(5));
  
 CREATE TABLE CommandeFourn
 (Numéro numeric(5) not NULL constraint CommandeFourn_Pk primary key,
@@ -35,7 +36,7 @@ CREATE TABLE RetourVidange
 (Fournisseur varchar(20) not NULL,
 Produit numeric(4) not NULL,
 Utilisateur varchar(20) not NULL,
-DateRetour date not NULL,
+DateRetVid date not NULL,
 Quantite numeric(4) not NULL,
 constraint RetourVidange_Pk primary key (Fournisseur, Produit, Utilisateur),
 constraint RetourVidange_FK_Utilisateur foreign key(Utilisateur) references Utilisateur,
