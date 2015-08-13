@@ -50,3 +50,15 @@ public class Singleton
         }
     }
 }
+
+---------------------------------------------------------------------
+package Exceptions;
+
+public class DataException extends Exception 
+{
+    
+    public String getMessage ()
+    {
+        return "Une erreur est survenue lors de la connexion";
+    }
+}
