@@ -1,3 +1,11 @@
+/*drop table Evenement;
+drop table Utilisateur;
+drop table Fournisseur;
+drop table Produit;
+drop table CommandeFourn;
+drop table RetourVidange;
+drop table LigneProduit;*/
+
 CREATE TABLE Utilisateur
 (Login varchar(20) not NULL constraint Utilisateur_Pk primary key,
 Password varchar(20) not NULL,
@@ -12,19 +20,23 @@ CodePostal numeric(4) not NULL,
 Localite varchar(50) not NULL);
  
 CREATE TABLE Produit
-(Reference numeric(5) IDENTITY (120,1) constraint Produit_Pk primary key,
+(Reference int not NULL constraint Produit_Pk primary key 
+ GENERATED ALWAYS AS IDENTITY
+        (START WITH 1, INCREMENT BY 1),
 Libelle varchar(30) not NULL,
-PrixBase numeric(3,2) not NULL,
-PrixVidange numeric(4,2),
+PrixBase numeric(5,2) not NULL,
+PrixVidange numeric(5,2),
 TVA numeric(4) not NULL,
 Reduction BOOLEAN not NULL,
 DateFinReduc date,
-PourcReduc numeric(4,2),
+PourcReduc numeric(5,2),
 QteStock numeric(5) not NULL,
 QteMinStock numeric(5) not NULL);
  
 CREATE TABLE CommandeFourn
-(Numéro numeric(5) not NULL constraint CommandeFourn_Pk primary key,
+(Numéro int not NULL constraint CommandeFourn_Pk primary key
+ GENERATED ALWAYS AS IDENTITY
+        (START WITH 1, INCREMENT BY 1),
 DateCommande date not NULL,
 Utilisateur varchar(20) not NULL,
 Fournisseur varchar(20) not NULL,
@@ -34,7 +46,7 @@ constraint CommandeFourn_FK_Fournisseur foreign key(Fournisseur) references Four
  
 CREATE TABLE RetourVidange
 (Fournisseur varchar(20) not NULL,
-Produit numeric(4) not NULL,
+Produit int not NULL,
 Utilisateur varchar(20) not NULL,
 DateRetVid date not NULL,
 Quantite numeric(4) not NULL,
@@ -44,8 +56,8 @@ constraint RetourVidange_FK_Produit foreign key(Produit) references Produit,
 constraint RetourVidange_FK_Fournisseur foreign key(Fournisseur) references Fournisseur);
  
 CREATE TABLE LigneProduit
-(Produit numeric(4) not NULL,
-CommandeFourn numeric(5) not NULL,
+(Produit int not NULL,
+CommandeFourn int not NULL,
 Quantite numeric(3) not NULL,
 constraint LigneProduit_Pk primary key (CommandeFourn, Produit),
 constraint LigneProduit_FK_Produit foreign key(Produit) references Produit,
